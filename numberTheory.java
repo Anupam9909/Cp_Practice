@@ -63,17 +63,19 @@ public class numberTheory{
     }
 
     // PRIMES
-    public static void is_prime(int n){
+    public static boolean[] is_prime(int n){
         boolean[] ans = new boolean[n+1];
+        Arrays.fill(ans, true);
         ans[0] = false;
         ans[1] = false;
-
+        // hame sirf fasle mark karna ha (i.e elemination vala tarika)
         for(int i = 2; i*i <=n ; i++){
-            if(ans[i])
+            if(ans[i]){ 
                 for(int j = i*i ; j <= n; j+=i) 
                     ans[j] = false;
+            }
         }
-
+        // last me jo true bacha vo hamara ans prime numbers
         return ans;
     } 
 
