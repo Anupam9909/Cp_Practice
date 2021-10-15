@@ -7,12 +7,10 @@ public class numberTheory{
         int b = scn.nextInt();
         System.out.println("GCD = " + gcd(a,b));
         
-        
         // LCM
         int a = scn.nextInt();
         int b = scn.nextInt();
         System.out.println("LCM = " + lcm(a,b));
-        
         
         // FACTORS
         int n = scn.nextInt();
